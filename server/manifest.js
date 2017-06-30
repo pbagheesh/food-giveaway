@@ -43,13 +43,16 @@ module.exports = new Confidence.Store({
                     $base: {
                         migrateOnStart: true,
                         knex: {
-                            client: 'sqlite3',
+                            client: 'pg',  //Assuming this changes the language which you are querying your
+                            //data base in  ?
                             useNullAsDefault: true,         // Suggested for sqlite3
                             pool: {
                                 idleTimeoutMillis: Infinity // Handles knex v0.12/0.13 misconfiguration when using sqlite3 (tgriesser/knex#1701)
                             },
                             connection: {
-                                filename: ':memory:'
+                                user: 'brs',
+                                password: 'BRS@2017',
+                                database: 'food_network'
                             }
                         }
                     },
