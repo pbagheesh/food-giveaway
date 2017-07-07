@@ -50,6 +50,7 @@ module.exports = new Confidence.Store({
                                 idleTimeoutMillis: Infinity // Handles knex v0.12/0.13 misconfiguration when using sqlite3 (tgriesser/knex#1701)
                             },
                             connection: {
+                                host: 'localhost', 
                                 user: 'brs',
                                 password: 'BRS@2017',
                                 database: 'food_network'

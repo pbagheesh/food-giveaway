@@ -23,7 +23,8 @@
       "haute-couture": "2.x.x",
       "joi": "10.x.x",
       "objection": "0.8.x",
-      "schwifty": "2.x.x"
+      "schwifty": "2.x.x",
+      "knex-postgis": "0.X.X"
   },
   "devDependencies": {
     "code": "3.x.x",
