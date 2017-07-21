@@ -21,7 +21,8 @@ module.exports = new Confidence.Store({
     connections: [
         {
             host: '0.0.0.0',
-            port: Hoek.reach(process.env, 'PORT', { default: 3000 })
+            // port: Hoek.reach(process.env, 'PORT', { default: 3000 })
+            port: process.env.PORT
         }
     ],
     registrations: [
@@ -50,9 +51,12 @@ module.exports = new Confidence.Store({
                             },
                             connection: {
                                 host: 'localhost',
-                                user: 'brs',
-                                password: 'BRS@2017',
-                                database: 'food_network'
+                                // user: 'brs',
+                                // password: 'BRS@2017',
+                                // database: 'food_network'
+                                user: process.env.DB_USERNAME,
+                                password:  process.env.DB_PASSWORD,
+                                database:  process.env.DB_NAME
                             }
                         }
                     },
